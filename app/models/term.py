@@ -8,3 +8,10 @@ class Term(Base):
     name = Column(String, unique=True)
     value = Column(String)
     is_approved = Column(Boolean, default=False)
+
+    @staticmethod
+    def filter_by_is_approved(query, search):
+        if not search and not isinstance(search, bool):
+            return query
+        return query.filter(Term.is_approved == search)
+
