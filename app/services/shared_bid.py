@@ -49,6 +49,9 @@ class SharedBidService:
     def get_values(company_name, investor, typer):
         while True:
             bid = typer.prompt(f"Bid for '{company_name}' by '{investor}'?")
+            if not bid.strip():
+                typer.echo(f"\n\033[1mBid for '{company_name}' by {investor} cannot be empty\033[0m")
+                continue
             try:
                 bid = int(bid)
                 break

@@ -48,15 +48,21 @@ class PricingService:
     def get_values(company_name, typer):
         while True:
             price = typer.prompt(f"Price for '{company_name}'?")
+            if not price.strip():
+                typer.echo(f"\n\033[1mPrice for '{company_name}' cannot be empty\033[0m")
+                continue
             try:
                 price = int(price)
                 break
             except ValueError:
-                typer.echo(f"\n\033[1mPrice for '{company_name}' must be a number\033[0m")
+                typer.echo(f"\n\033[1mPrice for '{company_name}' must be a whole number\033[0m")
 
         # Getting shares till it's an integer
         while True:
             shares = typer.prompt(f"Shares for '{company_name}'?")
+            if not shares.strip():
+                typer.echo(f"\n\033[1mShares for '{company_name}' cannot be empty\033[0m")
+                continue
             try:
                 shares = int(shares)
                 break
