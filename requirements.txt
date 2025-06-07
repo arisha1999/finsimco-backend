@@ -2,3 +2,4 @@ gevent
 sqlalchemy
 psycopg2-binary
 typer
+tabulate

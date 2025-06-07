@@ -9,7 +9,4 @@ COPY . .
 
 ENV PYTHONPATH=.
 
-# Убери эту строку, если она есть:
-# ENTRYPOINT ["python", "app/main.py", "run"]
-
-CMD [ "bash" ]
+CMD ["bash"]

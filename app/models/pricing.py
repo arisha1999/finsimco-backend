@@ -5,6 +5,6 @@ class Pricing(Base):
     __tablename__ = "pricing"
 
     id = Column(Integer, primary_key=True)
-    company_id = Column(Integer)
-    name = Column(String, unique=True)
-    value = Column(String)
+    company_name = Column(String)
+    price = Column(Integer)
+    shares = Column(Integer)

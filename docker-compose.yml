@@ -6,7 +6,7 @@ services:
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: simulation_db
+      POSTGRES_DB: simulation_db_2
     ports:
       - "5432:5432"
     volumes:
@@ -17,7 +17,7 @@ services:
     depends_on:
       - db
     environment:
-      - DATABASE_URL=postgresql://user:password@db:5432/simulation_db
+      - DATABASE_URL=postgresql://user:password@db:5432/simulation_db_2
     volumes:
       - .:/app
     tty: true
