@@ -14,7 +14,7 @@ For the 2nd Simulation Game – This one has the same logic of execution, except
 
 ### Table info for this project 
 
-![Excel Table](https://ibb.co/whQP6sff)
+![Excel Table](Excel_sheet.png)
 
 ## 🛠️ Technologies
 
