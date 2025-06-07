@@ -42,8 +42,11 @@ docker compose run --rm app python app/config/init_db.py
 
 # 5. Run the CLI simulation for each team/project combination
 # If it's Simulation Game № 1:
-docker compose run --rm app sh -c "python app/main.py 1 1 && python app/config/clear_db.py"
-docker compose run --rm app sh -c "python app/main.py 2 1 && python app/config/clear_db.py"
+docker compose run --rm app python app/main.py 1 1 # Team 1
+docker compose run --rm app python app/main.py 2 1 # Team 2
 # If it's Simulation Game № 1:
-docker compose run --rm app sh -c "python app/main.py 1 2 && python app/config/clear_db.py"
-docker compose run --rm app sh -c "python app/main.py 2 1 && python app/config/clear_db.py"
+docker compose run --rm app python app/main.py 1 2 # Team 1
+docker compose run --rm app python app/main.py 2 2 # Team 2
+
+# 6. To clear the DB run this
+docker compose run --rm app python app/config/clear_db.py
